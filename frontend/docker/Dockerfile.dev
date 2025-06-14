@@ -1,0 +1,12 @@
+FROM node:18-alpine
+
+WORKDIR /app
+
+# Ajouter le script d'initialisation
+COPY docker/entrypoint.sh /entrypoint.sh
+RUN chmod +x /entrypoint.sh
+
+EXPOSE 4200
+
+ENTRYPOINT ["/entrypoint.sh"]
+CMD ["npm", "start", "--", "--host", "0.0.0.0", "--poll", "500"]

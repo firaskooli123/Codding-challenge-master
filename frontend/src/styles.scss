@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Styles personnalisés qui ne peuvent pas être facilement remplacés par Tailwind */
+.highlight {
+  @apply bg-yellow-300 font-bold;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.search-container {
+  margin-bottom: 30px;
+}
+
+.search-input {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.suggestion-list {
+  display: grid;
+  gap: 20px;
+}
+
+.suggestion-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.suggestion-content {
+  line-height: 1.5;
+}
+
+
+/* Styles d'accessibilité */
+.highlight {
+  background-color: #FFFF00;
+  color: #000000;
+  font-weight: bold;
+  border-radius: 2px;
+  padding: 0 2px;
+}
+
+/* High contrast mode support */
+@media (forced-colors: active) {
+  .highlight {
+    border: 2px solid currentColor;
+  }
+}
+
+/* Focus styles */
+:focus {
+  outline: 2px solid #4299e1;
+  outline-offset: 2px;
+}
+
+/* Skip to content link - add to your app component */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+  transition: top 0.2s;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Styles pour le mode à contraste élevé */
+@media (prefers-contrast: more) {
+  body {
+    color: #000;
+    background-color: #fff;
+  }
+  
+  .highlight {
+    background-color: #000;
+    color: #fff;
+  }
+  
+  input, button {
+    border: 2px solid #000;
+  }
+}

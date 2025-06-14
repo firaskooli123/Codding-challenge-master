@@ -1,0 +1,41 @@
+# OS specific files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.idea/
+.vscode/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Frontend specific
+/frontend/node_modules/
+/frontend/.angular/
+/frontend/dist/
+/frontend/coverage/
+/frontend/npm-debug.log
+/frontend/yarn-error.log
+
+# Backend specific
+/backend/symfony/vendor/
+/backend/symfony/var/
+/backend/symfony/.env.local
+/backend/symfony/.env.local.php
+/backend/symfony/.env.*.local
+/backend/symfony/config/secrets/prod/prod.decrypt.private.php
+/backend/symfony/public/bundles/
+/backend/symfony/phpunit.xml
+/backend/symfony/.phpunit.result.cache
+
+# Docker
+.env
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.temp
